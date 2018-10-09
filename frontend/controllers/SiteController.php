@@ -68,7 +68,7 @@ class SiteController extends Controller
     {
         if ($cat == '') {
             // $cat = yii::$app->getRequest()->getPathInfo();
-            $cat = 'java';
+            $cat = 'newest';
         }
         $where = ['type' => Article::ARTICLE, 'status' => Article::ARTICLE_PUBLISHED];
         if ($cat != '' && $cat != 'index') {
