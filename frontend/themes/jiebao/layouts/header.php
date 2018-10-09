@@ -5,6 +5,10 @@
  * Date: 2018/10/7
  * Time: 14:06
  */
+
+use yii\helpers\Html;
+use yii\helpers\Url;
+
 \frontend\themes\jiebao\AppAsset::register($this);
 ?>
 <div class="header">
@@ -32,9 +36,12 @@
             </ul>
         </div>
         <div class="search_box">
-            <form>
-                <input type="text" value="Search" onfocus="this.value = '';"
-                       onblur="if (this.value == '') {this.value = 'Search';}"><input type="submit" value="">
+            <form action="<?= Url::to('/site/search') ?>" method="get">
+                <input id="s" type="text" name="q" value="<?= Html::encode(yii::$app->request->get('q')) ?>" required=""
+                       placeholder="<?= yii::t('frontend', 'Please input keywords') ?>" name="s" value="" ><input type="submit" value="">
+
+<!--                <input type="text" value="Search" onfocus="this.value = '';"-->
+<!--                       onblur="if (this.value == '') {this.value = 'Search';}"><input type="submit" value="">-->
             </form>
         </div>
         <div class="clear"></div>

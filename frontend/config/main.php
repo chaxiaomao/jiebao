@@ -74,6 +74,7 @@ return [
                 '' => 'site/index',
                 'product/<id:\d+>' => 'site/product',
                 '<name:\w+>' => 'site/category',
+                'search' => 'site/search',
                 '<page:\d+>' => 'article/index',
                 'login' => 'site/login',
                 'signup' => 'site/signup',

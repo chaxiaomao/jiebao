@@ -16,10 +16,11 @@ use yii\widgets\LinkPager;
 $this->title = $title;
 
 $css = "
-.grid_1_of_4:first-child{margin-left:8px;}
-.images_1_of_4{min-height: 190px;}
+.grid_1_of_4:first-child{margin-left:1.2%;}
+.images_1_of_4{max-height: 180px;min-height: 180px;}
 ";
 $this->registerCSS($css);
+
 
 ?>
 

@@ -19,7 +19,7 @@ class ProductListView extends \yii\base\Widget
     /**
      * @var int 标题截取长度
      */
-    public $titleLength = 14;
+    public $titleLength = 10;
 
     /**
      * @var int summary截取长度

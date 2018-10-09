@@ -6,10 +6,13 @@
  * Time: 15:19
  */
 
+use common\models\Article;
 use common\models\Options;
 use frontend\widgets\ArticleListView;
 use frontend\widgets\ProductListView;
 use frontend\widgets\ScrollPicView;
+use yii\data\ArrayDataProvider;
+
 $this->title = yii::$app->feehi->website_title;
 ?>
 <div class="header_slide">
@@ -37,7 +40,7 @@ $this->title = yii::$app->feehi->website_title;
                 <h3><?=$type?></h3>
             </div>
             <div class="see">
-                <p><a href="#">查看全部</a></p>
+                <p><a href="/newest">查看全部</a></p>
             </div>
             <div class="clear"></div>
         </div>
@@ -46,68 +49,20 @@ $this->title = yii::$app->feehi->website_title;
             'dataProvider' => $dataProvider,
         ]) ?>
         </div>
-        <div class="content_bottom">
+        <div class="content_top">
             <div class="heading">
-                <h3>Feature Products</h3>
+                <h3>随机展示</h3>
             </div>
             <div class="see">
-                <p><a href="#">查看全部</a></p>
+                <p><a href="/newest">查看全部</a></p>
             </div>
             <div class="clear"></div>
         </div>
         <div class="section group">
-            <div class="grid_1_of_4 images_1_of_4">
-                <a href="preview.html"><img src="images/new-pic1.jpg" alt="" /></a>
-                <h2>Lorem Ipsum is simply </h2>
-                <div class="price-details">
-                    <div class="price-number">
-                        <p><span class="rupees">$849.99</span></p>
-                    </div>
-                    <div class="add-cart">
-                        <h4><a href="preview.html">Add to Cart</a></h4>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-            </div>
-            <div class="grid_1_of_4 images_1_of_4">
-                <a href="preview.html"><img src="images/new-pic2.jpg" alt="" /></a>
-                <h2>Lorem Ipsum is simply </h2>
-                <div class="price-details">
-                    <div class="price-number">
-                        <p><span class="rupees">$599.99</span></p>
-                    </div>
-                    <div class="add-cart">
-                        <h4><a href="preview.html">Add to Cart</a></h4>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-            </div>
-            <div class="grid_1_of_4 images_1_of_4">
-                <a href="preview.html"><img src="images/new-pic4.jpg" alt="" /></a>
-                <h2>Lorem Ipsum is simply </h2>
-                <div class="price-details">
-                    <div class="price-number">
-                        <p><span class="rupees">$799.99</span></p>
-                    </div>
-                    <div class="add-cart">
-                        <h4><a href="preview.html">Add to Cart</a></h4>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-            </div>
-            <div class="grid_1_of_4 images_1_of_4">
-                <a href="preview.html"><img src="images/new-pic3.jpg" alt="" /></a>
-                <h2>Lorem Ipsum is simply </h2>
-                <div class="price-details">
-                    <div class="price-number">
-                        <p><span class="rupees">$899.99</span></p>
-                    </div>
-                    <div class="add-cart">
-                        <h4><a href="preview.html">Add to Cart</a></h4>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-            </div>
+            <?= ProductListView::widget([
+                'dataProvider' => new ArrayDataProvider([
+                    'allModels' => Article::find()->limit(1)->limit(4)->with('category')->orderBy("sort asc")->all(),
+                ])]) ?>
         </div>
     </div>
 </div>

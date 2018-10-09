@@ -156,7 +156,7 @@ class SiteController extends Controller
                 ]
             ],
             'pagination' => [
-                'pageSize' => 6
+                'pageSize' => 8
             ]
         ]);
         return $this->render('list', [
@@ -165,6 +165,34 @@ class SiteController extends Controller
         ]);
     }
 
+    /**
+     * 搜索
+     *
+     * @return string
+     */
+    public function actionSearch()
+    {
+        $where = ['type' => Article::ARTICLE];
+        $query = Article::find()->select([])->where($where);
+        $keyword = htmlspecialchars(yii::$app->getRequest()->get('q'));
+        $query->andFilterWhere(['like', 'title', $keyword]);
+        $dataProvider = new ActiveDataProvider([
+            'query' => $query,
+            'sort' => [
+                'defaultOrder' => [
+                    'sort' => SORT_ASC,
+                    'id' => SORT_DESC,
+                ]
+            ],
+            'pagination' => [
+                'pageSize' => 8
+            ]
+        ]);
+        return $this->render('list', [
+            'dataProvider' => $dataProvider,
+            'title' => yii::t('frontend', 'Search keyword {keyword} results', ['keyword'=>$keyword]),
+        ]);
+    }
 
     /**
      * Logs in a user.

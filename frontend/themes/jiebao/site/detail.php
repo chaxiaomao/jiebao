@@ -82,7 +82,7 @@ $this->registerCSS($css);
                         <h3>相关产品</h3>
                     </div>
                     <div class="see">
-                        <p><a href="#">查看全部</a></p>
+                        <p><a href="/<?= $model->category->name ?>">查看全部</a></p>
                     </div>
                     <div class="clear"></div>
                 </div>
