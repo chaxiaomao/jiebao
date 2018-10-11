@@ -55,7 +55,7 @@ $this->registerCSS($css);
                         <h2><?= $model->title ?></h2>
                         <p><?= $model->summary ?></p>
                         <div class="price">
-                            <p>价格: <span>￥<?= $model->sub_title ?></span></p>
+                            <p>价格: <span><?= $model->sub_title ?></span></p>
                         </div>
                     </div>
                     <div class="clear"></div>
