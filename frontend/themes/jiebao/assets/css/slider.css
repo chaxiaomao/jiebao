@@ -15,8 +15,8 @@
 }
 .slide { 
 	    padding:24px 25px; 
-	    /*width:31%;*/
-	    width:100%;
+	    width:31%;
+	    /*width:100%;*/
 	    float: left;
 	    position: relative; 
  }
