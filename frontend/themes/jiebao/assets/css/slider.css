@@ -15,8 +15,9 @@
 }
 .slide { 
 	    padding:24px 25px; 
-	    width:31%; 
-	    float: left; 
+	    /*width:31%;*/
+	    width:100%;
+	    float: left;
 	    position: relative; 
  }
  .slider-text{
