@@ -21,22 +21,29 @@ class ScrollPicView extends \yii\base\Widget
     //                          <a target='{target}' href=\"{link_url}\"><img class=\"img_855x300\" src=\"{img_url}\" alt=\"\"><span></span></a>
     //                       </li>";
 
-    public $template = "<div id='mover'>{lis}</div>";
+    // public $template = "<div id='mover'>{lis}</div>";
 
-    public $liTemplate = "<div id='slide-1' class='slide'>
-                            <div class='slider-img'>
-                                <a href='{link_url}' target='{target}'><img src='{img_url}' alt=''/></a>
-                            </div>
-                            <div class='slider-text'>
-                                <h1>Clearance<br><span>SALE</span></h1>
-                                <h2>UPTo 20% OFF</h2>
-                                <div class='features_list'>
-                                    <h4>Get to Know More About Our Memorable Services Lorem Ipsum is simply dummy text</h4>
-                                </div>
-                                <a href='{link_url}' class='button' target='{target}'>Shop Now</a>
-                            </div>
-                            <div class='clear'></div>
-                        </div>";
+    // public $liTemplate = "<div id='slide-1' class='slide'>
+    //                         <div class='slider-img'>
+    //                             <a href='{link_url}' target='{target}'><img src='{img_url}' alt=''/></a>
+    //                         </div>
+    //                         <div class='slider-text'>
+    //                             <h1>Clearance<br><span>SALE</span></h1>
+    //                             <h2>UPTo 20% OFF</h2>
+    //                             <div class='features_list'>
+    //                                 <h4>Get to Know More About Our Memorable Services Lorem Ipsum is simply dummy text</h4>
+    //                             </div>
+    //                             <a href='{link_url}' class='button' target='{target}'>Shop Now</a>
+    //                         </div>
+    //                         <div class='clear'></div>
+    //                     </div>";
+
+    public $template = "<div id=\"carousel1\" class=\"carousel-content\">
+            <ul class=\"carousel\">{lis}</ul><ul class=\"carousel-index\"></ul>
+			<div class=\"carousel-prev\"><img src=\"/static/images/icons/left_btn1.png\"></div>
+			<div class=\"carousel-next\"><img src=\"/static/images/icons/right_btn1.png\"></div></div>";
+
+    public $liTemplate = "<li><a href='{link_url}' target='{target}' style='background-image:url({img_url})'></a></li>";
 
     /**
      * @inheritdoc

@@ -14,10 +14,10 @@ class AppAsset extends AssetBundle
     public $css = [
         'css/easy-responsive-tabs.css',
         'css/global.css',
-        'css/slider.css',
+        // 'css/slider.css',
+        'css/slider-1.css',
         'css/style.css',
         'css/feehi.css',
-
     ];
     public $js = [
         'js/easing.js',
@@ -27,8 +27,9 @@ class AppAsset extends AssetBundle
         'js/jquery-1.7.2.min.js',
         'js/move-top.js',
         'js/script.js',
-        'js/slides.min.jquery.js',
-        'js/startstop-slider.js',
+        'js/carousel.js',
+        // 'js/slides.min.jquery.js',
+        // 'js/startstop-slider.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',
