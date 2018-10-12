@@ -16,6 +16,8 @@ use yii\web\NotFoundHttpException;
 class PageController extends Controller
 {
 
+    public $layout = "common_layout";
+
     /**
      * 单页
      *

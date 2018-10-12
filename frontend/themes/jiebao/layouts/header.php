@@ -10,11 +10,15 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 
 \frontend\themes\jiebao\AppAsset::register($this);
+$css = "
+.company{color:#B81D22;font-size:42px;}
+";
+$this->registerCSS($css);
 ?>
 <div class="header">
     <div class="headertop_desc">
         <div class="call">
-            <p><span>需要帮助?</span> 热线 <span class="number">1-22-3456789</span></span></p>
+            <p><span>需要帮助?</span> 联系 <span class="number"> 1-22-3456789 冯生</span></span></p>
         </div>
         <div class="account_desc">
 
@@ -23,7 +27,8 @@ use yii\helpers\Url;
     </div>
     <div class="header_top">
         <div class="logo">
-            <a href="/"><img src="images/logo.png" alt=""/></a>
+            <a class="company" href="/"><?= Yii::$app->feehi->website_title ?></a>
+<!--            <a href="/"><img src="images/logo.png" alt=""/></a>-->
         </div>
         <div class="clear"></div>
     </div>
@@ -31,7 +36,7 @@ use yii\helpers\Url;
         <div class="menu">
             <ul>
                 <li class="active"><a href="/">首页</a></li>
-                <li><a href="about.html">关于我们</a></li>
+                <li><a href="/about">关于我们</a></li>
                 <div class="clear"></div>
             </ul>
         </div>

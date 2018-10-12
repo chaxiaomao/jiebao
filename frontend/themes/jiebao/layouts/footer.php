@@ -60,6 +60,6 @@
         </div>
     </div>
     <div class="copy_right">
-        <p>Copyright &copy; 2018.Company Zhong Shan Jie Bao <a href="/" target="_blank" title="">中山洁宝有限公司</a> - Collect from <a href="/" title="" target="_blank">Jie Bao</a></p>
+        <p>Copyright &copy; 2018.Company Zhong Shan Jie Bao <a href="/" target="_blank" title=""><?= yii::$app->feehi->website_title ?></a> - Collect from <a href="/" title="" target="_blank">中山市小榄镇环镇南路</a></p>
     </div>
 </div>
