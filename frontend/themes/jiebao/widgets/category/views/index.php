@@ -21,6 +21,6 @@
     <!--        <li><a href="#">Beauty &amp; Healthcare</a></li>-->
     <!--        <li><a href="#">Toys, Kids &amp; Babies</a></li>-->
     <?php foreach ($data as $item): ?>
-        <li><a href="<?= $item['alias'] ?>"><?= $item['name'] ?></a></li>
+        <li><a href="/<?= $item['alias'] ?>"><?= $item['name'] ?></a></li>
     <?php endforeach; ?>
 </ul>
