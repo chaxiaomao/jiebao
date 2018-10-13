@@ -36,7 +36,7 @@ $this->registerCSS($css);
         <div class="menu">
             <ul>
                 <li class="active"><a href="/">首页</a></li>
-                <li><a href="/about">关于我们</a></li>
+                <li><a href="/page/about">关于我们</a></li>
                 <div class="clear"></div>
             </ul>
         </div>
