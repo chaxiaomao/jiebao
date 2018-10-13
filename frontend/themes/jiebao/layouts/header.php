@@ -18,7 +18,7 @@ $this->registerCSS($css);
 <div class="header">
     <div class="headertop_desc">
         <div class="call">
-            <p><span>需要帮助?</span> 联系 <span class="number"> 1-22-3456789 冯生</span></span></p>
+            <p><span>需要帮助?</span> 联系 <span class="number"> 13420341661 冯生</span></span></p>
         </div>
         <div class="account_desc">
 
