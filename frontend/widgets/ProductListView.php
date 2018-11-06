@@ -44,9 +44,9 @@ class ProductListView extends \yii\base\Widget
     //                          <a target='{target}' href=\"{link_url}\"><img class=\"img_855x300\" src=\"{img_url}\" alt=\"\"><span></span></a>
     //                       </li>";
 
-    public $template = "{lis}";
+    public $template = "<div id=\"masonry\" class=\"container-fluid\">{lis}</div>";
 
-    public $liTemplate = "<div class='grid_1_of_4 images_1_of_4'>
+    public $liTemplate = "<div class='grid_1_of_4 images_1_of_4 box'>
                             <a href='{article_url}'><img src='{img_url}' alt='' /></a>
                             <h2>{title}</h2>
                             <div class='price-details'>
@@ -59,6 +59,8 @@ class ProductListView extends \yii\base\Widget
                                 <div class='clear'></div>
                             </div>
                         </div>";
+
+    // public $liTemplate = "<div class=\"box\"><img src='{img_url}'></div>";
 
     /**
      * @inheritdoc

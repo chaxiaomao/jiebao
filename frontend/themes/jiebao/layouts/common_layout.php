@@ -20,6 +20,7 @@ backend\assets\AppAsset::register($this);
     <?= Html::csrfMetaTags() ?>
     <meta http-equiv="X-UA-Compatible" content="IE=10,IE=9,IE=8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <script src="http://jq22.qiniudn.com/masonry-docs.min.js"></script>
 </head>
 <body>
 <?php $this->beginBody() ?>

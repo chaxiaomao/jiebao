@@ -66,10 +66,10 @@ class SiteController extends Controller
 
     public function actionIndex($cat = '')
     {
-        if ($cat == '') {
-            // $cat = yii::$app->getRequest()->getPathInfo();
-            $cat = 'newest';
-        }
+        // if ($cat == '') {
+        //     // $cat = yii::$app->getRequest()->getPathInfo();
+        //     $cat = 'newest';
+        // }
         $where = ['type' => Article::ARTICLE, 'status' => Article::ARTICLE_PUBLISHED];
         if ($cat != '' && $cat != 'index') {
             if ($cat == yii::t('app', 'uncategoried')) {
@@ -99,7 +99,7 @@ class SiteController extends Controller
                 ]
             ],
             'pagination' => [
-                'pageSize' => 4
+                'pageSize' => 8
             ]
         ]);
         return $this->render('index', [
