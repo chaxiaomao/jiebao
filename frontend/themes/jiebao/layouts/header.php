@@ -11,7 +11,7 @@ use yii\helpers\Url;
 
 \frontend\themes\jiebao\AppAsset::register($this);
 $css = "
-.company{color:#B81D22;font-size:42px;}
+.company{color:#B81D22;font-size:21px;}
 ";
 $this->registerCSS($css);
 ?>

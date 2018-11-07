@@ -21,6 +21,18 @@ $css = "
 ";
 $this->registerCSS($css);
 
+$css = ".container-fluid {
+          padding: 20px;
+          }
+        .box {
+          margin-bottom: 20px;
+          float: left;
+          width: 220px;
+          }
+          .box img {
+          max-width: 100%
+        }";
+$this->registerCss($css);
 
 ?>
 
@@ -28,11 +40,11 @@ $this->registerCSS($css);
     <div class="content">
         <div class="section group">
             <div class="cont-desc span_1_of_2">
-
+                <div id="masonry" class="container-fluid">
                     <?= CategoryListView::widget([
                         'dataProvider' => $dataProvider,
                     ]) ?>
-
+                </div>
             </div>
             <div class="rightsidebar span_3_of_1">
                 <?= \frontend\themes\jiebao\widgets\category\CategoryMenu::widget([]) ?>

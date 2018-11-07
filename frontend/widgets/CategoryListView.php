@@ -75,7 +75,7 @@ class CategoryListView extends \yii\widgets\ListView
     //                            </p>
     //                            <span class='note'> {summary}</span>";
 
-    public $template = "<div class='grid_1_of_4 images_1_of_4'>
+    public $template = "<div class='grid_1_of_4 images_1_of_4 box'>
                             <a href='{article_url}'><img src='{img_url}' alt='' /></a>
                             <h2>{title}</h2>
                             <div class='price-details'>

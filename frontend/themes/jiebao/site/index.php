@@ -73,10 +73,12 @@ $this->registerCss($css);
             <div class="clear"></div>
         </div>
         <div class="section group">
+            <div id="masonry" class="container-fluid">
             <?= ProductListView::widget([
                 'dataProvider' => new ArrayDataProvider([
                     'allModels' => Article::find()->limit(1)->limit(40)->with('category')->orderBy("sort asc")->all(),
                 ])]) ?>
+            </div>
         </div>
     </div>
 </div>
@@ -102,14 +104,14 @@ $this->registerJs($js);
             }
         });
 
-        var $container = $('#masonry');
-        $container.imagesLoaded(function() {
-            $container.masonry({
-                itemSelector: '.box',
-                gutter: 20,
-                isAnimated: true,
-            });
-        });
+        // var $container = $('#masonry');
+        // $container.imagesLoaded(function() {
+        //     $container.masonry({
+        //         itemSelector: '.box',
+        //         gutter: 20,
+        //         isAnimated: true,
+        //     });
+        // });
 
     });
 </script>

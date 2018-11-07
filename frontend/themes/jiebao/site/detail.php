@@ -24,6 +24,17 @@ $this->title = $model->title;
 
 $css = "
 .images_1_of_4{min-height: 190px;}
+.container-fluid {
+          padding: 20px;
+          }
+        .box {
+          margin-bottom: 20px;
+          float: left;
+          width: 220px;
+          }
+          .box img {
+          max-width: 100%
+        }
 ";
 $this->registerCSS($css);
 
@@ -32,7 +43,9 @@ $this->registerCSS($css);
     <div class="content">
         <div class="content_top">
             <div class="back-links">
-                <p><a href="/">首页</a> >>>> <a href="#"><?= $model->category ? $model->category->name : yii::t('app', 'uncategoried'); ?></a> >>>> <a href="#"><?= $model->title ?></a></p>
+                <p><a href="/">首页</a> >>>> <a
+                            href="#"><?= $model->category ? $model->category->name : yii::t('app', 'uncategoried'); ?></a>
+                    >>>> <a href="#"><?= $model->title ?></a></p>
             </div>
             <div class="clear"></div>
         </div>
@@ -105,18 +118,43 @@ $this->registerCSS($css);
 </div>
 
 <?php
+//
+// $js = "$(function(){
+// 			$('#products').slides({
+// 				preload: true,
+// 				preloadImage: '/static/img/loading.gif',
+// 				effect: 'slide, fade',
+// 				crossfade: true,
+// 				slideSpeed: 350,
+// 				fadeSpeed: 500,
+// 				generateNextPrev: true,
+// 				generatePagination: false
+// 			});
+// 		});";
+// $this->registerJs($js);
+// ?>
 
-$js = "$(function(){
-			$('#products').slides({
-				preload: true,
-				preloadImage: '/static/img/loading.gif',
-				effect: 'slide, fade',
-				crossfade: true,
-				slideSpeed: 350,
-				fadeSpeed: 500,
-				generateNextPrev: true,
-				generatePagination: false
-			});
-		});";
-$this->registerJs($js);
-?>
+<script>
+    $(function () {
+        $('#products').slides({
+            preload: true,
+            preloadImage: '/static/img/loading.gif',
+            effect: 'slide, fade',
+            crossfade: true,
+            slideSpeed: 350,
+            fadeSpeed: 500,
+            generateNextPrev: true,
+            generatePagination: false
+        });
+
+        var $container = $('#masonry');
+        $container.imagesLoaded(function () {
+            $container.masonry({
+                itemSelector: '.box',
+                gutter: 20,
+                isAnimated: true,
+            });
+        });
+
+    });
+</script>
