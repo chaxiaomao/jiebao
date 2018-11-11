@@ -12,20 +12,24 @@ use yii\helpers\Url;
 \frontend\themes\jiebao\AppAsset::register($this);
 $css = "
 .company{color:#B81D22;font-size:21px;}
+.call{float:none;margin-bottom:10px}
 ";
 $this->registerCSS($css);
 ?>
 <div class="header">
-    <div class="headertop_desc">
+<!--    <div class="headertop_desc">-->
+<!--        <div class="call">-->
+<!--            <p><span>需要帮助?</span> 联系 <span class="number"> 13420341661 冯生</span></span></p>-->
+<!--        </div>-->
+<!--        <div class="account_desc">-->
+<!---->
+<!--        </div>-->
+<!--        <div class="clear"></div>-->
+<!--    </div>-->
+    <div class="header_top">
         <div class="call">
             <p><span>需要帮助?</span> 联系 <span class="number"> 13420341661 冯生</span></span></p>
         </div>
-        <div class="account_desc">
-
-        </div>
-        <div class="clear"></div>
-    </div>
-    <div class="header_top">
         <div class="logo">
             <a class="company" href="/"><?= Yii::$app->feehi->website_title ?></a>
 <!--            <a href="/"><img src="images/logo.png" alt=""/></a>-->

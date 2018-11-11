@@ -40,11 +40,12 @@ $this->registerCss($css);
     <div class="content">
         <div class="section group">
             <div class="cont-desc span_1_of_2">
-                <div id="masonry" class="container-fluid">
-                    <?= CategoryListView::widget([
-                        'dataProvider' => $dataProvider,
-                    ]) ?>
-                </div>
+                <?= CategoryListView::widget([
+                    'dataProvider' => $dataProvider,
+                ]) ?>
+<!--                <div id="masonry" class="container-fluid">-->
+<!--                    -->
+<!--                </div>-->
             </div>
             <div class="rightsidebar span_3_of_1">
                 <?= \frontend\themes\jiebao\widgets\category\CategoryMenu::widget([]) ?>

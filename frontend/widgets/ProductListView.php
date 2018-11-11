@@ -36,17 +36,25 @@ class ProductListView extends \yii\base\Widget
      */
     public $thumbHeight = 150;
 
-    // public $template = "<ul class='slick centered-btns centered-btns1' style='max-width: 1309px;'>{lis}</ul>
-    //                     <a href='' class=\"centered-btns_nav centered-btns1_nav prev\">Previous</a>
-    //                     <a href='' class=\"centered-btns_nav centered-btns1_nav next\">Next</a>";
+    // public $template = "<div id=\"masonry\" class=\"container-fluid\">{lis}</div>";
     //
-    // public $liTemplate = "<li id=\"centered-btns1_s0\" class=\"\" style=\"display: list-item; float: none; position: absolute; opacity: 0; z-index: 1; transition: opacity 700ms ease-in-out;\">
-    //                          <a target='{target}' href=\"{link_url}\"><img class=\"img_855x300\" src=\"{img_url}\" alt=\"\"><span></span></a>
-    //                       </li>";
+    // public $liTemplate = "<div class='grid_1_of_4 images_1_of_4 box'>
+    //                         <a href='{article_url}'><img src='{img_url}' alt='' /></a>
+    //                         <h2>{title}</h2>
+    //                         <div class='price-details'>
+    //                             <div class='price-number'>
+    //                                 <p><span class='rupees'>{sub_title}</span></p>
+    //                             </div>
+    //                             <div class='add-cart'>
+    //                                 <h4><a href='{article_url}'>查看</a></h4>
+    //                             </div>
+    //                             <div class='clear'></div>
+    //                         </div>
+    //                     </div>";
 
-    public $template = "<div id=\"masonry\" class=\"container-fluid\">{lis}</div>";
+    public $template = "{lis}";
 
-    public $liTemplate = "<div class='grid_1_of_4 images_1_of_4 box'>
+    public $liTemplate = "<div class='grid_1_of_4 images_1_of_4'>
                             <a href='{article_url}'><img src='{img_url}' alt='' /></a>
                             <h2>{title}</h2>
                             <div class='price-details'>
@@ -60,7 +68,6 @@ class ProductListView extends \yii\base\Widget
                             </div>
                         </div>";
 
-    // public $liTemplate = "<div class=\"box\"><img src='{img_url}'></div>";
 
     /**
      * @inheritdoc

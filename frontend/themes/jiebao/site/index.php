@@ -30,11 +30,7 @@ $this->registerCss($css);
 
 ?>
 <div class="header_slide">
-    <div class="header_bottom_left">
-        <div class="categories">
-            <?= \frontend\themes\jiebao\widgets\category\CategoryMenu::widget([]) ?>
-        </div>
-    </div>
+
     <div class="header_bottom_right">
         <div class="slider">
             <div id="slider">
@@ -43,6 +39,11 @@ $this->registerCss($css);
                 ]) ?>
             </div>
             <div class="clear"></div>
+        </div>
+    </div>
+    <div class="header_bottom_left">
+        <div class="categories">
+            <?= \frontend\themes\jiebao\widgets\category\CategoryMenu::widget([]) ?>
         </div>
     </div>
     <div class="clear"></div>
@@ -73,12 +74,10 @@ $this->registerCss($css);
             <div class="clear"></div>
         </div>
         <div class="section group">
-            <div id="masonry" class="container-fluid">
             <?= ProductListView::widget([
                 'dataProvider' => new ArrayDataProvider([
                     'allModels' => Article::find()->limit(1)->limit(40)->with('category')->orderBy("sort asc")->all(),
                 ])]) ?>
-            </div>
         </div>
     </div>
 </div>
