@@ -62,7 +62,7 @@ class ProductListView extends \yii\base\Widget
                                     <p><span class='rupees'>{sub_title}</span></p>
                                 </div>
                                 <div class='add-cart'>
-                                    <h4><a href='{article_url}'>查看</a></h4>
+                                    
                                 </div>
                                 <div class='clear'></div>
                             </div>

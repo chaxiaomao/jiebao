@@ -343,7 +343,7 @@ body {
 }
  @media only screen and (max-width: 640px) {
 	 .images_1_of_4 {
-		 min-height: 160px;
+		 min-height: 128px;
 	 }
  }
 .images_1_of_4  img {
@@ -1401,6 +1401,7 @@ body {
 	.images_1_of_4 h2{
 		font-size:0.8em;
 		text-align: left;
+		min-height: 30.4px;
 	}
 	.see{
 		padding-top:0;
