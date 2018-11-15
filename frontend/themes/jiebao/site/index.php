@@ -46,6 +46,7 @@ $this->registerCss($css);
             <?= \frontend\themes\jiebao\widgets\category\CategoryMenu::widget([]) ?>
         </div>
     </div>
+
     <div class="clear"></div>
 </div>
 <div class="main">
@@ -76,7 +77,8 @@ $this->registerCss($css);
         <div class="section group">
             <?= ProductListView::widget([
                 'dataProvider' => new ArrayDataProvider([
-                    'allModels' => Article::find()->limit(1)->limit(40)->with('category')->orderBy("sort asc")->all(),
+                    'allModels' => Article::find()->where(['status' => 1])->limit(1)->limit(40)
+                        ->with('category')->orderBy("sort asc")->all(),
                 ])]) ?>
         </div>
     </div>

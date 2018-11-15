@@ -31,7 +31,7 @@ $this->registerCSS($css);
             <p><span>需要帮助?</span> 联系 <span class="number"> 13420341661 冯生</span></span></p>
         </div>
         <div class="logo">
-            <a class="company" href="/"><?= Yii::$app->feehi->website_title ?></a>
+            <a class="company" href="/"><?= Yii::$app->feehi->website_title ?> www.jiebao91.com</a>
 <!--            <a href="/"><img src="images/logo.png" alt=""/></a>-->
         </div>
         <div class="clear"></div>

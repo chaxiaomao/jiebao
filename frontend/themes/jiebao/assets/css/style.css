@@ -336,14 +336,14 @@ body {
 }
 .images_1_of_4 {
 	width: 20.8%;
+	height: 220px;
 	padding: 1.5%;
 	text-align: center;
 	position: relative;
-	/*min-height: 260px;*/
 }
  @media only screen and (max-width: 640px) {
 	 .images_1_of_4 {
-		 min-height: 128px;
+		 height: 148px;
 	 }
  }
 .images_1_of_4  img {
